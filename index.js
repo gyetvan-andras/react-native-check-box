@@ -1,12 +1,3 @@
- /**
- * react-native-check-box
- * Checkbox component for react native, it works on iOS and Android
- * https://github.com/crazycodeboy/react-native-check-box
- * Email:crazycodeboy@gmail.com
- * Blog:http://jiapenghui.com
- * @flow
- */
-
 import React, {Component} from 'react';
 import {
     StyleSheet,
@@ -15,6 +6,7 @@ import {
     Text,
     TouchableHighlight
 } from 'react-native'
+import PropTypes from 'prop-types'
 
 
 export default class CheckBox extends Component {
@@ -27,17 +19,17 @@ export default class CheckBox extends Component {
 
     static propTypes = {
         ...View.propTypes,
-        leftText: React.PropTypes.string,
-        leftTextView: React.PropTypes.element,
-        rightText: React.PropTypes.string,
+        leftText: PropTypes.string,
+        leftTextView: PropTypes.element,
+        rightText: PropTypes.string,
         leftTextStyle: Text.propTypes.style,
-        rightTextView: React.PropTypes.element,
+        rightTextView: PropTypes.element,
         rightTextStyle: Text.propTypes.style,
-        checkedImage: React.PropTypes.element,
-        unCheckedImage: React.PropTypes.element,
-        onClick: React.PropTypes.func.isRequired,
-        isChecked: React.PropTypes.bool,
-        enabled: React.PropTypes.bool
+        checkedImage: PropTypes.element,
+        unCheckedImage: PropTypes.element,
+        onClick: PropTypes.func.isRequired,
+        isChecked: PropTypes.bool,
+        enabled: PropTypes.bool
 
     }
     static defaultProps = {
